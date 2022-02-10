@@ -26,24 +26,27 @@ public void setUp() {
 @Test(priority=1)
 public void LoginTest() throws InterruptedException, ClassNotFoundException, SQLException, IOException {
             loginPageObj.insertUserName("demo@techfios.com");
-            // Thread.sleep(3000);
+             Thread.sleep(3000);
            loginPageObj.insertPassword("abc123");
-		// Thread.sleep(3000);
-        loginPageObj.clickOnSignInButton();
 		Thread.sleep(3000);
+        loginPageObj.clickOnSignInButton();
+		Thread.sleep(5000);
        takeScreenShotAtEndOfTest(driver);
-	}
+	
+       Thread.sleep(5000);
+
+}
 @Test(priority=2)
 public void LoginPageTitleTest() throws InterruptedException, ClassNotFoundException, SQLException, IOException {
             loginPageObj.insertUserName("demo@techfios.com");
-            // Thread.sleep(3000);
+             Thread.sleep(3000);
            loginPageObj.insertPassword("abc123");
-		// Thread.sleep(3000);
+		 Thread.sleep(3000);
         loginPageObj.clickOnSignInButton();
-		Thread.sleep(3000);
+		Thread.sleep(5000);
        String expecedTitle= "Dashboard- iBilling";
        String actualTitle= loginPageObj.getPageTitle();
-		Thread.sleep(3000);
+		Thread.sleep(5000);
 
        
        Assert.assertEquals(expecedTitle, actualTitle);

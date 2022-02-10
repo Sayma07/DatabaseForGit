@@ -24,8 +24,8 @@ public class TestBase {
 	driver=new ChromeDriver();
 	driver.manage().window().maximize();
 	driver.manage().deleteAllCookies();
-	driver.manage().timeouts().pageLoadTimeout(2, TimeUnit.SECONDS);
-	driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+	driver.manage().timeouts().pageLoadTimeout(5, TimeUnit.SECONDS);
+	driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 	driver.get("https://www.techfios.com/billing/?ng=login" );
 	}
 	
